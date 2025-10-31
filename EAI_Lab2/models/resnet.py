@@ -78,7 +78,6 @@ class ResNet(nn.Module):
         start_idx = self.current_cfg_idx
         first_out = cfg[start_idx : start_idx + 3] 
         self.current_cfg_idx += 3
-          
         downsample = None
         if stride != 1 or in_c != first_out[2]:
             downsample = nn.Sequential(
